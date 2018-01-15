@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %}{% endblock %}
+
+    <!-- Bootstrap core CSS -->
+   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <link href="../static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="../static/style.css" rel="stylesheet">
+
+    <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+  {% if user.is_authenticated %}
+      {% include 'header_auth.html' %}
+  {% else %}
+      {% include 'header_not_auth.html' %}
+  {% endif %}
+
+
+
+
+ <div class="container ">
+    <div class="row">
+  <div class="col-sm-12 blog-main second">
+
+		{% block content %}{% endblock %}
+  <nav aria-label="...">
+                <div class="pagination">
+                    <span class="step-links">
+                        {% if paginator.has_previous %}
+                             <a href="?page={{paginator.previous_page_number}}">Previous</a>
+                        {% endif %}
+                        {% if paginator.has_previous or paginator.has_next %}
+
+                        <span class="current">Страница {{ paginator.number }} из {{ paginator.paginator.num_pages }}
+                        </span> {% endif %}
+                        {% if paginator.has_next %}
+
+                    <a href = "?page={{paginator.next_page_number }}">Следующая</a> {% endif %}
+                    </span>
+                </div>
+{#      {% block js %}#}
+{##}
+{#                    <script src="http://code.jquery.com/jquery-latest.js"></script>#}
+{#                    <script src="/static/endless.js"></script>#}
+{#                    <script>$.endlessPaginate({#}
+{#            paginateOnScroll: true,#}
+{#            paginateOnScrollMargin: 3#}
+{#        });</script>#}
+{#      {% endblock %}#}
+  </nav>
+  </div>
+
+
+        <div class="col-sm-3 offset-sm-1 blog-sidebar blog-sidebar-popular">
+          <div class="sidebar-module sidebar-module-popular">
+            <h4>Popular Tags</h4>
+            <ol class="list-unstyled">
+{#              <li><a href="#">MySql</a></li>#}
+{#              <li><a href="#">Postgesql</a></li>#}
+{#              <li><a href="#">Java</a></li>#}
+{#              <li><a href="#">C/C++</a></li>#}
+{#              <li><a href="#">Python</a></li>#}
+{#              <li><a href="#">Django</a></li>#}
+{#              <li><a href="#">html/css</a></li>#}
+{#              <li><a href="#">JavaScript</a></li>#}
+                <li><a href="#">{{ Tags.petuhi }}</a></li>
+              <li><a href="{% url 'listing_by_tag' %}">Other</a></li>
+            </ol>
+          </div>
+          <div class="sidebar-module">
+            <h4>Best Members</h4>
+            <ol class="list-unstyled">
+              <li><a href="#">Chuvashov</a></li>
+              <li><a href="#">Britikov</a></li>
+              <li><a href="#">Adamyan</a></li>
+            </ol>
+          </div>
+        </div><!-- /.blog-sidebar -->
+    </div><!-- /.row -->
+ </div><!-- /.container -->
+
+
+
+
+{% comment %}<footer>
+        <p>&copy; Company 2017</p>
+</footer>{% endcomment %}
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="../static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../static/custom.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="offcanvas.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block title %}NewQuestion{% endblock %}
+{% block styles %}
+{% comment %}<link href="../static/sign_in_style.css" rel="stylesheet">{% endcomment %}
+{% endblock %}
+{% block content %}
+    <div class="col-md-12">
+    <h3>New Question</h3>
+{#			<form class="form-horizontal">#}
+{#  			<div class="form-group">#}
+{#    			<label for="inputTitle" class="col-sm-2 control-label">Title</label>#}
+{#    			<div class="col-sm-10">#}
+{#      			<input type="text" class="form-control" id="inputTitle" placeholder="Title">#}
+{#    			</div>#}
+{#  			</div>#}
+{#  			<div class="form-group">#}
+{#    			<label for="inputTitle" class="col-sm-2 control-label">Text</label>#}
+{#    			<div class="col-sm-10 ">#}
+{#                    <textarea type="text" class="form-control" id="inputTitle" placeholder="Text" maxlength="100px"></textarea>#}
+{#    			</div>#}
+{#  			</div>#}
+{#				<div class="form-group">#}
+{#    			<label for="inputTitle" class="col-sm-2 control-label">Tags</label>#}
+{#    			<div class="col-sm-10">#}
+{#      			<input type="text" class="form-control" id="inputTags" placeholder="Tags">#}
+{#    			</div>#}
+{#  			</div>#}
+{#  				<button type="submit" class="btn btn-default btn-new-question">ASK</button>#}
+{#			</form>#}
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="title">Title<em>*</em></label>
+                {{ form.title }}
+            </div>
+
+            <div class="form-group">
+                <label for="text">Text: </label>
+                {{ form.text }}
+            </div>
+
+             <div class="form-group ">
+
+{#                 {{ tag_form }}#}
+{#                 <br>#}
+{#                 <br>#}
+                 {{ form.tags }}
+
+             </div>
+            <button type="submit" class="btn btn-primary">Ask</button>
+
+         </form>
+    </div>
+
+
+
+
+{% endblock %}
+
+
+

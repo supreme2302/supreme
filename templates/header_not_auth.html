@@ -1,0 +1,15 @@
+<nav class="navbar navbar-fixed-top navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="{% url 'question' %}">Supreme</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <form class="form-inline my-2 my-lg-0 my-form-inline">
+            <input class="form-control mr-sm-2 " type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Search</button>
+            <a class = "register" href = "{% url 'registration' %}">register</a>
+            <a class = "login" href = "{% url 'sign_in' %}">log in</a>
+            </form>
+        </div><!-- /.nav-collapse -->
+      </div><!-- /.container -->
+    </nav><!-- /.navbar -->

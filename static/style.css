@@ -1,0 +1,115 @@
+
+.my-form-inline input[type="text"]{
+    width: 320px; margin:10px;
+}
+
+a.login {
+    font-size: 18px; padding: 15px 15px; color: #a6e1ec;
+    float: right;
+}
+
+a.register{
+    font-size: 18px;  padding: 15px 15px;color: #a6e1ec;
+    float: right;
+}
+
+
+.blog-sidebar-popular{
+    float:right;
+}
+.sidebar-module-popular{
+    margin-top:100px;
+}
+.second{
+	float:left; margin-top: 100px; width: 500px;
+}
+.btn-sign{
+    width:250px;
+}
+.btn-search:hover{
+    background-color: #a6e1ec;
+}
+.new_question_text{
+    height: 100px;
+
+}
+.btn-new-question{
+    float:right;
+    width:100px;
+}
+.btn-new-question:hover{
+    background-color: #a6e1ec;
+}
+textarea{
+    resize: vertical;
+}
+.one-q{
+    padding-top: 25px;
+}
+.panel-body2{
+    width: 70px;
+}
+.p-foot{
+    font-size: 18px;  padding: 15px 15px;
+    float:right;
+    color: #9d9d9d;
+}
+.nav-height{
+
+   width: 100%;
+   height: 55px;   /* Высота блока footer */
+}
+.margin-password{
+    margin-top: 10px;
+}
+.color-head{
+    color: #a6e1ec;
+}
+.img-head{
+    /*margin-left: 400px;*/
+    margin-left: 125px;
+}
+.row-head{
+    text-align: center;
+}
+.btn-ask{
+    width:150px;
+    margin-left: 125px;
+    /*border-radius: 0px;*/
+    color: #222;
+    background-color: #a6e1ec;
+    font-size: 18px;
+    height: 34px;
+}
+.btn-ask:hover {
+    color: #a6e1ec;
+    background-color:#222;
+}
+.panel-like {
+    width:44px;
+    height: 44px;
+    float: left;
+}
+.btn-like {
+    margin-left: 12px;
+    background-color: #a6e1ec;
+    border-color: #a6e1ec;
+    color: black;
+}
+.btn-dislike {
+    background-color: grey;
+    border-color: grey;
+}
+.btn-dislike:focus{
+    background-color: grey;
+}
+.btn-like:focus{
+    background-color: #a6e1ec;
+}
+.btn-like:hover{
+    background-color: #a6e1ec;
+}
+.btn-dislike:hover{
+    background-color: grey;
+    color: black;
+}

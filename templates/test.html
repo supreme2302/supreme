@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block title %}Questions{% endblock %}
+{% block styles %}
+{% comment %}<link href="../static/sign_in_style.css" rel="stylesheet">{% endcomment %}
+{% endblock %}
+
+{% block content %}
+
+<div class = "container">
+    <div class="col-md-6">
+        <div class="row row-head">
+            <div class="col-sm-4">
+{#             <h1>Questions</h1>#}
+                <a href="{% url 'question' %}"><h1>Questions</h1></a>
+            </div>
+{#         {% if not hot %}#}
+{#         <div class="col-sm-4">#}
+{#             <a href="{% url 'hot' %}"><h1>Hot</h1></a>#}
+{#         </div>#}
+{#         {% endif %}#}
+        </div>
+        {% for data in questions %}
+            {% include "question_template.html" %}
+        {%endfor%}
+    </div>
+</div>
+{% endblock %}
+
+

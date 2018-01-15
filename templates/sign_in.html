@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block title %}SignIn{% endblock %}
+{% block styles %}
+{% comment %}<link href="../static/sign_in_style.css" rel="stylesheet">{% endcomment %}
+{% endblock %}
+{% block content %}
+
+
+      <h4>Log In</h4>
+  <div class="sidebar-module ">
+
+      <form  method = "POST">
+            {% csrf_token %}
+            <input type="text" name = "username" id="inputLogin" class="form-control " placeholder="Login">
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" name="password" id="inputPassword" class="form-control margin-password" placeholder="Password">
+            <div class="checkbox">
+            <label>
+            <input type="checkbox" value="remember-me"> Remember me
+            </label>
+            </div>
+            <button  class="btn btn-lg btn-primary btn-block btn-sign" type="submit">Sign in</button>
+      </form>
+  </div><!-- /.blog-post -->
+
+
+
+
+{% endblock %}
+

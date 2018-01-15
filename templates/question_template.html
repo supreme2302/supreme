@@ -1,0 +1,33 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="col-md-3 one-q">
+            <img width="95" height="95" src='/{{ data.user.avatar }}' alt="image" class="img-rounded">
+            <div class="row like-wrapper">
+                <br>
+                <button class="btn btn-success btn-like" onclick="like('{{ user }}', {{data.id }} , true )">
+                     <span>(+)</span>
+                 </button>
+                <span class="panel panel-default " id='rating{{ data.id }}'>{{ data.rating}}</span>
+                <button class="btn btn-warning btn-dislike"   onclick="like('{{ user }}', {{data.id }} , false )">
+                    <span>(-)</span>
+                 </button>
+
+            </div>
+
+        </div>
+        <div class="col-md-9 col-md-offset-0">
+            <a href="{% url 'one_question' data.id %}" class="MainQuestion"><h1>{{ data.title }}</h1></a>
+            <p class="Textpoint">{{ data.text }}</p>
+{#			<a href="/">answer ({{  }})</a>#}
+            <div class="Probel">
+                <nobr>Tags:</nobr>
+
+                {% for j in data.tag.all %}
+              <a href='{%  url 'listing_by_tag' %}?tag={{ j }}'>{{ j }}</a>
+          {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+

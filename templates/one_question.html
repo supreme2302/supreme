@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% block title %}OneQuestion{% endblock %}
+{% block styles %}
+{% comment %}<link href="../static/sign_in_style.css" rel="stylesheet">{% endcomment %}
+{% endblock %}
+{% block content %}
+
+    <div class = "container">
+        <div class="col-md-6">
+  			<div class="panel-body">
+					<div class="col-md-3 one-q">
+						<img width="95" height="95" src='/{{ questions.user.avatar }}' alt="image" class="img-rounded">
+						<div class="row like-wrapper">
+                            <br>
+                                <button class="btn btn-success btn-like" action="">
+                                     <span>(+{{i.likecount}})</span>
+                                 </button>
+                                <span class="panel panel-default ">{{ questions.rating }}</span>
+                                <button class="btn btn-warning btn-dislike" action="">
+                                     <span>(-{{i.discount}})</span>
+                                </button>
+                            </p>
+                        </div>
+					</div>
+					<div class="col-md-9 col-md-offset-0">
+                        <a href="{% url 'one_question' questions.id  %}" class="MainQuestion"><h1>{{ questions.title }}</h1></a>
+						<p class="Textpoint">{{ questions.text }}</p>
+							<nobr>Tags:</nobr>
+							<a href="/">Other</a>
+					</div>
+				</div>
+				<hr>
+            {% for data in paginator %}
+			<div class="panel panel-default">
+  			<div class="panel-body">
+					<div class="col-md-3">
+						<img width="95" height="95" src="/{{ data.user.avatar }}" alt="image" class="img-rounded">
+						<div class="row like-wrapper">
+                            <br>
+                                <button class="btn btn-success btn-like" action="">
+                                     <span>(+{{i.likecount}})</span>
+                                 </button>
+                                <span class="panel panel-default ">{{ questions.rating }}</span>
+                                <button class="btn btn-warning btn-dislike" action="">
+                                     <span>(-{{i.discount}})</span>
+                                </button>
+                            </p>
+                        </div>
+					</div>
+					<div class="col-md-9 col-md-offset-0">
+						<p class="Textpoint">{{ data.text }}</p>
+						<nobr><input type="checkbox" name="option1" value="a1" checked> Correct!</nobr>
+					</div>
+				</div>
+			</div>
+            {%endfor%}
+
+			<hr>
+			<form class="form-horizontal" method="POST">
+            {% csrf_token %}
+  			<div class="form-group">
+    			<div class="col-sm-12 ">
+                    {{ form.text }}
+    			</div>
+				<div class="col-md-2">
+  				<button style="margin-top: 10px" type="submit" class="btn btn-default btn-search">Answer</button>
+				</div>
+				</div>
+			</form>
+		</div>
+    </div>
+
+
+{% endblock %}
