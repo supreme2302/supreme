@@ -35,13 +35,10 @@ from fill import *
 # Create your views here.
 def Questions(request):
     questions = Question.objects.all()
-
     page = request.GET.get('page')
-    return render(request, 'questions.html', {'questions': questions, 'paginator': paginate(questions, page)})
+    return render(request, 'questions.html', {'questions': questions, 'data': paginate(questions, page)})
 
-def test(request):
-    p_test = Question.objects.all()
-    return render(request, 'test.html', {'questions': p_test})
+
 
 def tag(request):
     tagg = Tag.objects.get(name=request.GET.get('tag'))
@@ -129,11 +126,6 @@ def OneQuestion(request, qnum):
 
 
 
-            #
-    # print '___________________________________'
-    # print question
-    #
-    #
 
 
 
@@ -165,6 +157,23 @@ def Registration(request):
     return render(request, 'regist.html', {'form': form})
 
 
+def test(request):
+    if request.method == 'POST':
+        login_name = request.POST.get('login')
+        password_name = request.POST.get('password')
+        # user = authenticate(request, username=login, password=password)
+        # if user is not None and user.is_active:
+        #     login(request, user)
+        #     return HttpResponseRedirect('/')
+        user = authenticate(request, username=login_name, password=password_name)
+
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            return HttpResponseRedirect('/test/')
+
+    return render(request, 'test.html', locals())
 
 def Settings(request):
     if request.user.is_authenticated:
@@ -281,3 +290,16 @@ def like(request):
                 quest.save()
                 return JsonResponse({'rating': quest.rating}, status=200)
     return HttpResponse()
+
+
+def scroll(request):
+    print('inscroll')
+    data = Question.objects.all()
+   # page = paginate(data, request)
+    page = request.GET.get('page')
+    print page
+
+    print('pagination done')
+    return render(request, 'list.html', {'data': paginate(data, page)})
+
+

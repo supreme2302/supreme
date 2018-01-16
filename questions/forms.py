@@ -8,7 +8,7 @@ class RegistrationForm(forms.Form):
     email = forms.EmailField(label='emal')
     username = forms.CharField(label='username')
     password = forms.CharField(min_length=8,widget=forms.PasswordInput, label='password')
-    password2 = forms.CharField(min_length=8, widget=forms.PasswordInput, label='reapet password')
+    password2 = forms.CharField(min_length=8, widget=forms.PasswordInput, label='repeat password')
     #avatar = forms.ImageField(label='avatar')
 
 class SettingForm(forms.Form):

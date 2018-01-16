@@ -15,4 +15,5 @@ urlpatterns = [
     url(r'^test/', views.test, name = 'test'),
     url(r'^one_question/(?P<qnum>(\d+))$', views.OneQuestion,  name="one_question"),
     url(r'^like', views.like, name='like'),
+    url(r'^scroll', views.scroll, name='scroll'),
 ]

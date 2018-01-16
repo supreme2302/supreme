@@ -1,29 +1,35 @@
 {% extends "base.html" %}
-{% block title %}Questions{% endblock %}
 {% block styles %}
-{% comment %}<link href="../static/sign_in_style.css" rel="stylesheet">{% endcomment %}
+<link href="../static/modalform.css" rel="stylesheet">
 {% endblock %}
 
 {% block content %}
-
-<div class = "container">
-    <div class="col-md-6">
-        <div class="row row-head">
-            <div class="col-sm-4">
-{#             <h1>Questions</h1>#}
-                <a href="{% url 'question' %}"><h1>Questions</h1></a>
-            </div>
-{#         {% if not hot %}#}
-{#         <div class="col-sm-4">#}
-{#             <a href="{% url 'hot' %}"><h1>Hot</h1></a>#}
-{#         </div>#}
-{#         {% endif %}#}
+<div id="modal_form1">
+    <span id="modal_close1">X</span>
+    <form role="form"  method="POST">
+        {% csrf_token %}
+        <div class="col-sm-9">
+            <label>Login</label> <br>
+            <input  name="login" class="form-control input-login" placeholder="Enter">
         </div>
-        {% for data in questions %}
-            {% include "question_template.html" %}
-        {%endfor%}
-    </div>
+
+        <div class="col-sm-9 input-password">
+            <label for="LoginInputPassword">Password</label>
+            <input type="password" name="password" class="form-control input-passwor" id="LoginInputPassword" placeholder="Password">
+        </div>
+
+
+
+{#            <div class="form-group">#}
+{#                <input type="hidden"  name="referer" value="{{ request.get_full_path }}">#}
+{#            </div>#}
+
+        <div class="col-sm-9 ">
+            <button type="submit" class="btn btn-default sign-btn">Sign In</button>
+        </div>
+    </form>
 </div>
+
+<div id="overlay1"></div>
+<a href = "#" class = "modal1">Open modal window</a>
 {% endblock %}
-
-

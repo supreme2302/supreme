@@ -1,6 +1,6 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <div class="col-md-3 one-q">
+        <div class="col-md-3 one-q" >
             <img width="95" height="95" src='/{{ data.user.avatar }}' alt="image" class="img-rounded">
             <div class="row like-wrapper">
                 <br>
@@ -19,7 +19,7 @@
             <a href="{% url 'one_question' data.id %}" class="MainQuestion"><h1>{{ data.title }}</h1></a>
             <p class="Textpoint">{{ data.text }}</p>
 {#			<a href="/">answer ({{  }})</a>#}
-            <div class="Probel">
+            <div class="Probel" >
                 <nobr>Tags:</nobr>
 
                 {% for j in data.tag.all %}

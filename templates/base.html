@@ -46,25 +46,26 @@
 
 
  <div class="container ">
-    <div class="row">
-  <div class="col-sm-12 blog-main second">
+     <div class="row">
+         <div class="col-sm-12 blog-main second">
 
-		{% block content %}{% endblock %}
-  <nav aria-label="...">
-                <div class="pagination">
-                    <span class="step-links">
-                        {% if paginator.has_previous %}
-                             <a href="?page={{paginator.previous_page_number}}">Previous</a>
-                        {% endif %}
-                        {% if paginator.has_previous or paginator.has_next %}
+		    {% block content %}{% endblock %}
+             <nav aria-label="...">
+{#                 <div class="pagination">#}
+{#                    <span class="step-links">#}
+{#                        {% if paginator.has_previous %}#}
+{#                             <a href="?page={{paginator.previous_page_number}}">Previous</a>#}
+{#                        {% endif %}#}
+{#                        {% if paginator.has_previous or paginator.has_next %}#}
+{##}
+{#                        <span class="current">Страница {{ paginator.number }} из {{ paginator.paginator.num_pages }}#}
+{#                        </span> {% endif %}#}
+{#                        {% if paginator.has_next %}#}
+{#                            <a href = "?page={{paginator.next_page_number }}">Следующая</a>#}
+{#                        {% endif %}#}
+{#                    </span>#}
+{#                </div>#}
 
-                        <span class="current">Страница {{ paginator.number }} из {{ paginator.paginator.num_pages }}
-                        </span> {% endif %}
-                        {% if paginator.has_next %}
-
-                    <a href = "?page={{paginator.next_page_number }}">Следующая</a> {% endif %}
-                    </span>
-                </div>
 {#      {% block js %}#}
 {##}
 {#                    <script src="http://code.jquery.com/jquery-latest.js"></script>#}
@@ -74,8 +75,8 @@
 {#            paginateOnScrollMargin: 3#}
 {#        });</script>#}
 {#      {% endblock %}#}
-  </nav>
-  </div>
+             </nav>
+        </div>
 
 
         <div class="col-sm-3 offset-sm-1 blog-sidebar blog-sidebar-popular">
@@ -90,8 +91,8 @@
 {#              <li><a href="#">Django</a></li>#}
 {#              <li><a href="#">html/css</a></li>#}
 {#              <li><a href="#">JavaScript</a></li>#}
-                <li><a href="#">{{ Tags.petuhi }}</a></li>
-              <li><a href="{% url 'listing_by_tag' %}">Other</a></li>
+{#                <li><a href="#">{{ Tags.petuhi }}</a></li>#}
+              <li><a href="#">Other</a></li>
             </ol>
           </div>
           <div class="sidebar-module">

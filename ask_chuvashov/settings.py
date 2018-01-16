@@ -129,7 +129,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = '/home/egor/Projects/ask_chuvashov/static/'
 #STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-try:
-    from .settings_prod import *
-except:
-    pass
+# try:
+#     from .settings_prod import *
+# except:
+#     pass

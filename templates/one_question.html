@@ -26,7 +26,9 @@
                         <a href="{% url 'one_question' questions.id  %}" class="MainQuestion"><h1>{{ questions.title }}</h1></a>
 						<p class="Textpoint">{{ questions.text }}</p>
 							<nobr>Tags:</nobr>
-							<a href="/">Other</a>
+							{% for j in questions.tag.all %}
+                             <a href='{%  url 'listing_by_tag' %}?tag={{ j }}'>{{ j }}</a>
+                            {% endfor %}
 					</div>
 				</div>
 				<hr>
@@ -49,7 +51,7 @@
 					</div>
 					<div class="col-md-9 col-md-offset-0">
 						<p class="Textpoint">{{ data.text }}</p>
-						<nobr><input type="checkbox" name="option1" value="a1" checked> Correct!</nobr>
+
 					</div>
 				</div>
 			</div>
