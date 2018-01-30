@@ -1,18 +1,28 @@
 
 <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
+    <div class="container-fluid">
+        {% include "sidebar.html" %}
         <div class="navbar-header">
-          <a class="navbar-brand color-head" href="{% url 'question' %}">Supreme</a>
-        </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <form class="form-inline my-2 my-lg-0 my-form-inline">
-            <input class="form-control mr-sm-2 " type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Search</button>
-            <a class="btn btn-outline-success my-2 my-sm-0 btn-ask" href = "{% url 'new_question' %}" type="submit">Ask a Question</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu-auth">
+                <span class="sr-only">Open navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand color-head" href="{% url 'question' %}">Supreme</a>
             <img width="35" height="35" class="img-rounded img-head" src= "/{{ user.profile.avatar }}">
+        </div>
+        <form class="form-inline my-2 my-lg-0 my-xs-0 my-form-inline">
+            <input class="form-control mr-sm-2 mr-xs-2 my-input" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 my-xs-0 btn-search" type="submit"></button>
+        </form>
+
+        <a class="btn btn-outline-success my-2 my-sm-0 my-xs-0 btn-ask" href = "{% url 'new_question' %}" type="submit">Ask</a>
+
+
+        <div id="responsive-menu-auth" class="collapse navbar-collapse col-md-1 col-xs-5 col-lg-1 my-navbar">
             <a class = "login" href = "{% url 'settings' %}">settings</a>
             <a class = "register" href = "{% url 'logout' %}">log out</a>
-            </form>
         </div><!-- /.nav-collapse -->
-      </div><!-- /.container -->
-    </nav><!-- /.navbar -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->

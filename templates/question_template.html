@@ -1,13 +1,13 @@
 <div class="panel panel-default">
     <div class="panel-body">
-        <div class="col-md-3 one-q" >
-            <img width="95" height="95" src='/{{ data.user.avatar }}' alt="image" class="img-rounded">
+        <div class="col-md-4 col-sm-4 col-xs-4 one-q" >
+            <img width="95em" height="95em" src='/{{ data.user.avatar }}' alt="image" class="img-rounded img-my">
             <div class="row like-wrapper">
                 <br>
                 <button class="btn btn-success btn-like" onclick="like('{{ user }}', {{data.id }} , true )">
                      <span>(+)</span>
                  </button>
-                <span class="panel panel-default " id='rating{{ data.id }}'>{{ data.rating}}</span>
+                <span class="panel panel-default between-likes" id='rating{{ data.id }}'>{{ data.rating}}</span>
                 <button class="btn btn-warning btn-dislike"   onclick="like('{{ user }}', {{data.id }} , false )">
                     <span>(-)</span>
                  </button>
@@ -15,7 +15,7 @@
             </div>
 
         </div>
-        <div class="col-md-9 col-md-offset-0">
+        <div class="col-md-8 col-sm-8 col-xs-8 col-xs-offset-0 col-md-offset-0 content-quest">
             <a href="{% url 'one_question' data.id %}" class="MainQuestion"><h1>{{ data.title }}</h1></a>
             <p class="Textpoint">{{ data.text }}</p>
 {#			<a href="/">answer ({{  }})</a>#}

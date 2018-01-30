@@ -121,3 +121,11 @@ function scr(page) {
         });
 
 };
+
+
+$(document).ready(function() {
+
+    $('.sidebar-menu').click(function (event) {
+        $('.right-sidebar').toggleClass('active');
+    });
+});

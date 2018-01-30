@@ -6,11 +6,11 @@
 
 {% block content %}
 
-<div class = "container">
- <div class="col-md-6">
+<div class = "container inner-container">
+ <div class="col-lg 6 col-md-6 col-sm-8 col-xs-8 xs-quest">
 
      <div class="row row-head" >
-         <div class="col-sm-4">
+         <div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 in-row-head">
              <a href="{% url 'question' %}"><h1>Questions</h1></a>
          </div>
 
@@ -23,7 +23,7 @@
     </div>
 
     {% if data.has_next %}
-        <div class="col-sm-12" style="margin-top: 20px" id="btn{{ data.next_page_number }}">
+        <div class="col-sm-12 col-xs-12" style="margin-top: 20px" id="btn{{ data.next_page_number }}">
             <button class="btn btn-warning" onclick="scr({{ data.next_page_number }})">More</button>
         </div>
     {% endif %}

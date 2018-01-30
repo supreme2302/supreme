@@ -1,19 +1,23 @@
-
 <nav class="navbar navbar-fixed-top navbar-inverse">
-      <div class="container">
+    <div class="container">
+        {% include "sidebar.html" %}
         <div class="navbar-header">
-          <a class="navbar-brand" href="{% url 'question' %}">Supreme</a>
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#responsive-menu">
+                <span class="sr-only">Open navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'question' %}">Supreme</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
-            <form class="form-inline my-2 my-lg-0 my-form-inline">
-                <input class="form-control mr-sm-2 " type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0 btn-search" type="submit">Search</button>
-                <a class = "register" href = "{% url 'registration' %}">register</a>
-                <a class = "login" href = "{% url 'test' %}">log in</a>
 
-
-
-            </form>
+        <form class="form-inline my-2 my-lg-0 my-xs-0 my-form-inline">
+            <input class="form-control mr-sm-2 mr-xs-2 my-input" type="text" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0 my-xs-0 btn-search" type="submit"></button>
+        </form>
+        <div id="responsive-menu" class="collapse navbar-collapse col-md-1 col-xs-5 col-lg-1 my-navbar">
+            <a class = "register" href = "{% url 'registration' %}">register</a>
+            <a class = "login" href = "{% url 'test' %}">log in</a>
         </div><!-- /.nav-collapse -->
       </div><!-- /.container -->
 </nav><!-- /.navbar -->

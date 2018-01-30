@@ -35,84 +35,32 @@
   </head>
 
   <body>
-
   {% if user.is_authenticated %}
       {% include 'header_auth.html' %}
   {% else %}
       {% include 'header_not_auth.html' %}
   {% endif %}
-
-
-
-
- <div class="container ">
-     <div class="row">
-         <div class="col-sm-12 blog-main second">
-
-		    {% block content %}{% endblock %}
-             <nav aria-label="...">
-{#                 <div class="pagination">#}
-{#                    <span class="step-links">#}
-{#                        {% if paginator.has_previous %}#}
-{#                             <a href="?page={{paginator.previous_page_number}}">Previous</a>#}
-{#                        {% endif %}#}
-{#                        {% if paginator.has_previous or paginator.has_next %}#}
-{##}
-{#                        <span class="current">Страница {{ paginator.number }} из {{ paginator.paginator.num_pages }}#}
-{#                        </span> {% endif %}#}
-{#                        {% if paginator.has_next %}#}
-{#                            <a href = "?page={{paginator.next_page_number }}">Следующая</a>#}
-{#                        {% endif %}#}
-{#                    </span>#}
-{#                </div>#}
-
-{#      {% block js %}#}
-{##}
-{#                    <script src="http://code.jquery.com/jquery-latest.js"></script>#}
-{#                    <script src="/static/endless.js"></script>#}
-{#                    <script>$.endlessPaginate({#}
-{#            paginateOnScroll: true,#}
-{#            paginateOnScrollMargin: 3#}
-{#        });</script>#}
-{#      {% endblock %}#}
-             </nav>
-        </div>
-
-
-        <div class="col-sm-3 offset-sm-1 blog-sidebar blog-sidebar-popular">
-          <div class="sidebar-module sidebar-module-popular">
-            <h4>Popular Tags</h4>
-            <ol class="list-unstyled">
-{#              <li><a href="#">MySql</a></li>#}
-{#              <li><a href="#">Postgesql</a></li>#}
-{#              <li><a href="#">Java</a></li>#}
-{#              <li><a href="#">C/C++</a></li>#}
-{#              <li><a href="#">Python</a></li>#}
-{#              <li><a href="#">Django</a></li>#}
-{#              <li><a href="#">html/css</a></li>#}
-{#              <li><a href="#">JavaScript</a></li>#}
-{#                <li><a href="#">{{ Tags.petuhi }}</a></li>#}
-              <li><a href="#">Other</a></li>
-            </ol>
+  <div class="container general-container">
+      <div class="row xs-row">
+          <div class="col-xs-12  col-sm-12 col-md-12 blog-main second xs-third-rec">
+              {% block content %}{% endblock %}
           </div>
-          <div class="sidebar-module">
-            <h4>Best Members</h4>
-            <ol class="list-unstyled">
-              <li><a href="#">Chuvashov</a></li>
-              <li><a href="#">Britikov</a></li>
-              <li><a href="#">Adamyan</a></li>
-            </ol>
-          </div>
-        </div><!-- /.blog-sidebar -->
-    </div><!-- /.row -->
+
+
+          <div class="col-xs-2 col-sm-3 offset-sm-1 offset-xs-1 blog-sidebar blog-sidebar-popular right-sidebar ">
+              <div class="sidebar-module sidebar-module-popular">
+                  <h4>Popular Tags</h4>
+                  <ol class="list-unstyled">
+                      <li><a href="#">Other</a></li>
+                  </ol>
+              </div>
+          </div><!-- /.blog-sidebar -->
+      </div><!-- /.row -->
  </div><!-- /.container -->
 
 
 
 
-{% comment %}<footer>
-        <p>&copy; Company 2017</p>
-</footer>{% endcomment %}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

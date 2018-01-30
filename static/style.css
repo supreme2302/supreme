@@ -1,14 +1,28 @@
 
 .my-form-inline input[type="text"]{
-    width: 320px; margin:10px;
+    width: 100%;
+    margin-top: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    padding-right: 15%;
+}
+
+.my-form-inline {
+    position: relative;
+    display: inline-block;
+}
+.my-navbar {
+    float: right;
 }
 
 a.login {
     font-size: 18px; padding: 15px 15px; color: #a6e1ec;
+    height: 34px;
     float: right;
 }
 
 a.register{
+    height: 34px;
     font-size: 18px;  padding: 15px 15px;color: #a6e1ec;
     float: right;
 }
@@ -29,6 +43,18 @@ a.register{
 .btn-search:hover{
     background-color: #a6e1ec;
 }
+.btn-search {
+    margin-top: 9%;
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+    background:white url("../static/search.png") no-repeat center;
+}
+
+
 .new_question_text{
     height: 100px;
 
@@ -66,8 +92,8 @@ textarea{
     color: #a6e1ec;
 }
 .img-head{
-    /*margin-left: 400px;*/
-    margin-left: 125px;
+    margin: 10px 20px;
+
 }
 .row-head{
     text-align: center;
@@ -80,7 +106,9 @@ textarea{
     background-color: #a6e1ec;
     font-size: 18px;
     height: 34px;
+    position: relative;
 }
+
 .btn-ask:hover {
     color: #a6e1ec;
     background-color:#222;
@@ -112,4 +140,299 @@ textarea{
 .btn-dislike:hover{
     background-color: grey;
     color: black;
+}
+
+.right-sidebar{
+    padding-top: 25px;
+    background-color: #f1f1f1;
+    -webkit-transition: right 1s ease-out 0.1s;
+    -moz-transition: right 1s ease-out 0.1s;
+    -o-transition: right 1s ease-out 0.1s;
+    transition: right 1s ease-out 0.1s
+}
+.sidebar-menu {
+    float: right;
+
+}
+
+.navbar .my-sidebar .icon-bar{
+    background-color: #a6e1ec;
+
+}
+h1 {
+    width: 100%;
+    position: relative;
+    word-wrap: break-word;
+}
+
+@media (max-width: 991px) {
+    .btn-ask {
+        margin-left: 10px;
+    }
+}
+
+@media (max-width: 774px) {
+    a.login {
+        font-size: 4vh;
+        padding-top: 17px;
+    }
+    a.register {
+        padding-top: 17px;
+        font-size: 4vh;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .btn-ask {
+        /*float: right;*/
+        margin-top: 12px;
+    }
+
+    .img-head {
+        float: left;
+        margin-top: 12px;
+        margin-right: 17px;
+        max-width: 100%;
+        position: relative;
+    }
+
+    .right-sidebar {
+        position: fixed;
+        right: -250px;
+        width: 150px;
+        height: 100%;
+    }
+    h1 {
+        word-wrap: break-word;
+    }
+    .active {
+        right: 0;
+    }
+    .my-navbar {
+        float: left;
+    }
+    a.login{
+        float: left;
+        height: 10%;
+    }
+    a.register{
+        float: left;
+        margin-left: 5%;
+    }
+    .my-form-inline {
+        float:left;
+    }
+    .xs-quest {
+        width: 100%;
+    }
+    .inner-container {
+        width: 100%;
+    }
+    .xs-third-rec {
+        width: 100%;
+    }
+}
+@media (max-width: 523px) {
+    .my-navbar {
+        float: left;
+        width: 100%;
+    }
+    a.register {
+        margin-left: 1.5%;
+        padding-left: 0;
+    }
+    .general-container {
+
+        float:left;
+        margin-left: 0;
+    }
+    .inner-container {
+        width: 100%;
+        position: relative;
+        float: left;
+        margin-left: 0;
+
+        padding-left: 0;
+    }
+    .xs-row {
+        float: left;
+        margin-left: 0;
+    }
+    .xs-quest {
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+    }
+    .xs-third-rec {
+        width: 100%;
+        position: relative;
+        float: left;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .one-q {
+        padding-left: 0;
+    }
+    .img-my {
+        width: 75px;
+        height: 75px;
+    }
+    .btn-like {
+        margin-left: 13px;
+        padding-left: 3px;
+        padding-top: 2px;
+        width: 25px;
+        height: 26px;
+    }
+    .btn-dislike {
+        float: right;
+        margin-top: 3px;
+        padding-left: 4px;
+        padding-top: 2px;
+        width: 25px;
+        height: 26px;
+    }
+    .between-likes {
+        margin-left: 4px;
+        font-size: 4vh;
+    }
+    h1 {
+        font-size: 4vh;
+        word-wrap: break-word;
+    }
+    p {
+        font-size: 2vh;
+    }
+}
+
+@media (max-width: 431px) {
+    .my-form-inline {
+        width: 220px;
+    }
+}
+@media (max-width: 409px) {
+    .my-form-inline {
+        width: 190px;
+    }
+    .btn-search {
+        padding-top: 12px;
+    }
+}
+@media (max-width: 379px) {
+    .btn-ask {
+        word-wrap: break-word;
+        font-size: 3vh;
+        width: 25%;
+    }
+}
+@media (max-width: 341px) {
+
+    .my-navbar {
+        float: left;
+        width: 100%;
+    }
+    a.register {
+        margin-left: 1.5%;
+        padding-left: 0;
+    }
+    .general-container {
+
+        float:left;
+        margin-left: 0;
+    }
+    .inner-container {
+        width: 100%;
+        position: relative;
+        float: left;
+        margin-left: 0;
+
+        padding-left: 0;
+    }
+    .xs-row {
+        float: left;
+        margin-left: 0;
+    }
+    .xs-quest {
+        width: 100%;
+        position: relative;
+        padding-left: 0;
+    }
+    .xs-third-rec {
+        width: 100%;
+        position: relative;
+        float: left;
+        margin-left: 0;
+        padding-left: 0;
+    }
+    .one-q {
+        padding-left: 0;
+    }
+    .img-my {
+        width: 75px;
+        height: 75px;
+    }
+    .btn-like {
+        margin-left: 13px;
+        padding-left: 3px;
+        padding-top: 2px;
+        width: 25px;
+        height: 26px;
+    }
+    .btn-dislike {
+        float: right;
+        padding-left: 4px;
+        padding-top: 2px;
+        width: 25px;
+        height: 26px;
+    }
+    .between-likes {
+        font-size: 4vh;
+    }
+    h1 {
+        font-size: 3vh;
+        width: 130px;
+        word-wrap: break-word;
+    }
+    p {
+        font-size: 2vh;
+        width: 130px;
+    }
+}
+@media (max-width: 317px) {
+    .btn-ask {
+        font-size: 3vh;
+    }
+    .color-head {
+        width: 85px;
+    }
+}
+@media (max-width: 298px) {
+    .btn-ask {
+        font-size: 3vh;
+        width: 20%;
+    }
+    .color-head {
+        width: 75px;
+    }
+    .btn-dislike {
+        margin-top: 0;
+        width: 24px;
+    }
+    .btn-like {
+        width: 24px;
+    }
+    .between-likes {
+        font-size: 3vh;
+    }
+}
+@media (max-width: 283px) {
+    .btn-like {
+        width: 22px;
+        height: 26px;
+    }
+    .btn-dislike {
+        width: 22px;
+        height: 26px;
+    }
 }
