@@ -3,13 +3,11 @@ from __future__ import unicode_literals
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponseRedirect, JsonResponse, HttpResponse
-
+#from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib import auth
 from questions.forms import *
 from questions.models import ModelAskForm, Like
 
-
-#from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from questions.paginator import paginate
 
 from django.contrib.auth.models import User
@@ -36,7 +34,13 @@ from fill import *
 def Questions(request):
     questions = Question.objects.all()
     page = request.GET.get('page')
-    return render(request, 'questions.html', {'questions': questions, 'data': paginate(questions, page)})
+    context = {
+        'questions': questions,
+        'data': paginate(questions, page),
+    }
+
+    return render(request, 'questions.html', context)
+    #return render(request, 'pagin_test.html', {'questions': questions, 'data': paginate(questions, page)})
 
 
 
@@ -47,7 +51,7 @@ def tag(request):
     page = request.GET.get('page')
     #for i in Question.objects.all().filter(tag=tagg):
         #data.append(i)
-    return render(request, 'questions.html', {'paginator': paginate(data, page)})
+    return render(request, 'questions.html', {'data': paginate(data, page)})
 
 def ListingByTag(request):
     questions = Question.objects.all()
@@ -179,22 +183,28 @@ def Settings(request):
     if request.user.is_authenticated:
         us = request.user
         if request.method == 'POST':
-            login = request.POST.get('login')
-            email = request.POST.get('email')
-            username = request.POST.get('nickname')
+            form = SettingForm(request.POST)
+            is_val = form.is_valid()
+            password = request.POST.get('password')
+            password2 = request.POST.get('password2')
             avatar = request.FILES.get('file')
-            us.username= login
-            us.profile.nickname = username
+            if password != us.password:
+                form.add_error('old_password', ['Incorrect password'])
+                is_val = False
+
+            us.password= password2
             us.profile.avatar = avatar
             us.save()
             us.profile.save()
             return HttpResponseRedirect('/')
+        else:
+            form = SettingForm()
     else:
         return HttpResponseRedirect('/sign_in/')
 
 
 
-    return render(request,'settings.html',locals())
+    return render(request,'settings.html', {'form': form})
 
 
 

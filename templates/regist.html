@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load bootstrap %}
 
 {% block title %}registration{% endblock %}
 
 {% block content %}
 <div class="main_block_elem">
 <form method="POST" class="form-horizontal" enctype="multipart/form-data">
-    <h3 style="text-align:center">Регистрация пользователя</h3>
+    <h3 style="text-align:center">Registration</h3>
     {% csrf_token %}
     {% for field in form %}
         {% for error in field.errors %}
@@ -14,17 +15,17 @@
     {% endfor %}
 
     {% for field in form %}
-    <div class="form-group">
-        <label for="{{ field.id_for_label }}" class="col-sm-3 control-label">{{ field.label }}:</label>
-        <div class="col-sm-9">
-            {{ field }}
+    <div class="form-group regist-group regist-dj-div">
+        <label for="{{ field.id_for_label }}" class="col-sm-1 col-xs-1 col-md-1 col-md-1 control-label"></label>
+        <div class="col-lg-9 col-md-7 col-sm-8 col-xs-6 regist-dj-div">
+            {{ field|bootstrap_horizontal:"col-lg-3 col-md-3 col-sm-4 col-xs-6"  }}
         </div>
     </div>
     {% endfor %}
-    <div class="form-group">
+    <div class="form-group regist-group regist-dj-div">
         <input type="file" name="file" id="exampleInputFile">
         <div class="col-sm-offset-3 col-sm-9">
-            <button type="submit" class="btn btn-primary">Зарегистрировать</button>
+            <button type="submit" class="btn btn-primary">Sign up</button>
         </div>
     </div>
 </form>

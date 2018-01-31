@@ -44,6 +44,7 @@
       <div class="row xs-row">
           <div class="col-xs-12  col-sm-12 col-md-12 blog-main second xs-third-rec">
               {% block content %}{% endblock %}
+              {% include 'paginator.html' %}
           </div>
 
 
@@ -51,6 +52,9 @@
               <div class="sidebar-module sidebar-module-popular">
                   <h4>Popular Tags</h4>
                   <ol class="list-unstyled">
+{#                      {% for j in tag.all %}#}
+{#                          <li><a href='{%  url 'listing_by_tag' %}?tag={{ j }}'>{{ j }}</a></li>#}
+{#                      {% endfor %}#}
                       <li><a href="#">Other</a></li>
                   </ol>
               </div>

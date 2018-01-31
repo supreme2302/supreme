@@ -1,0 +1,50 @@
+{#{% if items.has_other_pages %}#}
+{#<nav aria-label="...">#}
+{#    <ul class="pagination">#}
+{#        <span class="step-links">#}
+{#                      {% if items.has_previous %}#}
+{#                          <li class="page-item"><a class="page-link"#}
+{#                                                   href="?page={{items.previous_page_number}}"><<</a>#}
+{#                          </li>#}
+{#                      {% else %}#}
+{#                          <li class="page-item disabled">#}
+{#                            <a class="page-link"><span><<</span></a>#}
+{#                          </li>#}
+{#                      {% endif %}#}
+{#                      {% for i in data %}#}
+{#                          {% if items.number == i %}#}
+{#                              <li class="page-item active">#}
+{#                                  <a class="page-link" href="#">{{ i }}<span class="sr-only">(current)</span></a>#}
+{#                              </li>#}
+{#                          {% else %}#}
+{#                              <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>#}
+{#                          {% endif %}#}
+{#                      {% endfor %}#}
+{#                      {% if items.has_next %}#}
+{#                          <li class="page-item"><a class="page-link" aria-label="Next" href="?page{{ items.next_page_number }}">>></a></li>#}
+{#                      {% else %}#}
+{#                          <li class="page-item disabled">#}
+{#                            <a class="page-link"><span>></span></a>#}
+{#                          </li>#}
+{#                      {% endif %}#}
+{##}
+{#        </span>#}
+{#    </ul>#}
+{#</nav>#}
+{#{% endif %}#}
+
+<nav aria-label="...">
+    <div class="pagination">
+        <span class="step-links">
+                      {% if data.has_previous %}
+                          <a class="btn btn-success" href="?page={{data.previous_page_number }}">Previous</a>
+                      {% endif %}
+                      {% if data.has_previous or data.has_next %}
+                          <span class="current">Page {{ data.number }} of {{ data.paginator.num_pages }}</span>
+                      {% endif %}
+                      {% if data.has_next %}
+                          <a class="btn btn-success" href = "?page={{data.next_page_number }}">Next</a>
+                      {% endif %}
+        </span>
+    </div>
+</nav>

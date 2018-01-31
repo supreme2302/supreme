@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load bootstrap %}
 {% block title %}Settings{% endblock %}
 {% block styles %}
 {% comment %}<link href="../static/sign_in_style.css" rel="stylesheet">{% endcomment %}
@@ -9,24 +10,34 @@
 <h3>Settings: Supreme</h3>
 <form method="POST" enctype="multipart/form-data">
     {% csrf_token %}
-	<div class="form-group">
-		<label for="exampleInputLogin1">Login</label>
-		<input type="text" name="login" class="form-control" id="exampleInputLogin1" placeholder="Login">
-	</div>
-	<div class="form-group">
-		<label for="exampleInputEmail1">Email address</label>
-		<input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
-	</div>
-	<div class="form-group">
-		<label for="exampleInputNickName1">NickName</label>
-		<input type="text" name="nickname" class="form-control" id="exampleInputNickName1" placeholder="NickName">
-	</div>
-	<div class="form-group">
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger" role="alert">{{ field.errors }}</div>
+        {% endfor %}
+    {% endfor %}
 
-		<label for="exampleAvatar">Avatar</label>
+    {% for field in form %}
+    <div class="form-group regist-group regist-dj-div">
+        <label for="{{ field.id_for_label }}" class="col-sm-1 col-xs-1 col-md-1 col-md-1 control-label"></label>
+        <div class="col-lg-9 col-md-7 col-sm-8 col-xs-6 regist-dj-div">
+            {{ field|bootstrap_horizontal:"col-lg-3 col-md-3 col-sm-4 col-xs-6"  }}
+        </div>
+    </div>
+    {% endfor %}
+    <div class="form-group regist-group regist-dj-div">
         <input type="file" name="file" id="exampleInputFile">
-	</div>
-	<button type="submit" class="btn btn-default">Save</button>
+        <div class="col-sm-offset-3 col-sm-9">
+            <button type="submit" class="btn btn-primary">Save</button>
+        </div>
+    </div>
+
+
+
+{#	<div class="form-group">#}
+{#		<label for="exampleAvatar">Avatar</label>#}
+{#        <input type="file" name="file" id="exampleInputFile">#}
+{#	</div>#}
+{#	<button type="submit" class="btn btn-default">Save</button>#}
 </form>
 </div>
 

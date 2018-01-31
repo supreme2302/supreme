@@ -89,14 +89,6 @@
 },
 {
    "model": "sessions.session",
-   "pk": "d9kgkslnmbr5yeju4yp22rsodv89vllr",
-   "fields": {
-      "session_data": "ODg0OGYwNzM5MTZmY2NjNDM0OTc2YTE5MjAwNzQ5ODc5ODAyN2Q2OTp7Il9hdXRoX3VzZXJfaGFzaCI6Ijg4NGYyNDQ2ZWQxN2JlNDQ2ZDI2MjNmMmRmMjA2OWU2MDYxOGU1NDciLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI3In0=",
-      "expire_date": "2018-01-23T11:53:52.468Z"
-   }
-},
-{
-   "model": "sessions.session",
    "pk": "i7rn9fewygddul52t6viukxr314dq0dy",
    "fields": {
       "session_data": "ODZmNTNhYjBjODgwNTNhNmQ5YzAyMTk0NzYwOGI4MjUzMDI5YTNlNzp7Il9hdXRoX3VzZXJfaGFzaCI6IjljNWZkYjQ2YjQxOWNjMjMxNDNmZGEwNTlmYWFhNGVjZTc5YjRkZmUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI2In0=",
@@ -109,6 +101,14 @@
    "fields": {
       "session_data": "ODZhNDIxZmQ5NDU2YzU4MGQxNDBkMTc0MGM0Yjk5MjUzM2YxYmYzZDp7Il9hdXRoX3VzZXJfaGFzaCI6IjM0MTA0M2RiMjU5YzBkZmY2YzIwN2JjNjUwODY5M2NmNDhmZDM2MTYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiIxIn0=",
       "expire_date": "2018-01-07T21:48:12.985Z"
+   }
+},
+{
+   "model": "sessions.session",
+   "pk": "kcwpkd8icaccmr5z0kdoe35h92vca9ja",
+   "fields": {
+      "session_data": "YTQzZTQxMzA2ZTUwMDdmNDU5MjU0MTdkMmIzMjYwMDU3ZDMwOWMyOTp7Il9hdXRoX3VzZXJfaGFzaCI6ImY1YWM5ZDVkZDcwZjc0MTc5M2I5N2JjNTIyNDk2YTQ5NmQ1MzRlNTIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOiI4In0=",
+      "expire_date": "2018-02-13T23:47:24.575Z"
    }
 },
 {
@@ -134,7 +134,7 @@
       "user": 1,
       "title": "Go v Sochi?",
       "text": "Budem katat' na lizhah",
-      "rating": 2,
+      "rating": 1,
       "pub_date": "2017-12-24T20:14:29Z",
       "tag": [
          1
@@ -214,27 +214,62 @@
 },
 {
    "model": "questions.question",
-   "pk": 12,
+   "pk": 17,
    "fields": {
-      "user": 6,
-      "title": "Go v pubg",
-      "text": "gooooooooo!",
-      "rating": 1,
-      "pub_date": "2017-12-25T11:42:59.252Z",
+      "user": 1,
+      "title": "Head test! Head test! Head test! Head test! Head test! Head test! Head test! Head test! Head test! Head test! Head test! Head test!",
+      "text": "asdas",
+      "rating": 0,
+      "pub_date": "2018-01-29T23:59:01.015Z",
       "tag": [
-         1
+         1,
+         3,
+         2,
+         5,
+         6,
+         7,
+         8,
+         9
       ]
    }
 },
 {
    "model": "questions.question",
-   "pk": 13,
+   "pk": 18,
    "fields": {
-      "user": 6,
-      "title": "vfasdfsadasdfasdf",
-      "text": "sdagsfdgsdf",
+      "user": 3,
+      "title": "one more",
+      "text": "sdfsdf",
       "rating": 0,
-      "pub_date": "2017-12-25T12:02:32.422Z",
+      "pub_date": "2018-01-30T00:00:48.400Z",
+      "tag": [
+         10
+      ]
+   }
+},
+{
+   "model": "questions.question",
+   "pk": 19,
+   "fields": {
+      "user": 1,
+      "title": "teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest",
+      "text": "teeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeest",
+      "rating": 0,
+      "pub_date": "2018-01-30T02:24:56.597Z",
+      "tag": [
+         10
+      ]
+   }
+},
+{
+   "model": "questions.question",
+   "pk": 20,
+   "fields": {
+      "user": 8,
+      "title": "Quest one more",
+      "text": "ahahahah",
+      "rating": 0,
+      "pub_date": "2018-01-30T22:56:51.616Z",
       "tag": [
          1,
          2
@@ -243,30 +278,15 @@
 },
 {
    "model": "questions.question",
-   "pk": 14,
+   "pk": 21,
    "fields": {
-      "user": 6,
-      "title": "Test pagination",
-      "text": "Pagination test",
+      "user": 8,
+      "title": "wowowow",
+      "text": "priest",
       "rating": 0,
-      "pub_date": "2018-01-07T16:31:40.719Z",
+      "pub_date": "2018-01-30T22:57:09.341Z",
       "tag": [
-         1
-      ]
-   }
-},
-{
-   "model": "questions.question",
-   "pk": 15,
-   "fields": {
-      "user": 7,
-      "title": "Kakaya pogoda?",
-      "text": "Cho tak holodno",
-      "rating": 0,
-      "pub_date": "2018-01-09T11:54:35.704Z",
-      "tag": [
-         1,
-         4
+         11
       ]
    }
 },
@@ -295,6 +315,30 @@
    }
 },
 {
+   "model": "questions.answer",
+   "pk": 3,
+   "fields": {
+      "user": 7,
+      "question": 1,
+      "text": "\u0433\u043e",
+      "rating": 0,
+      "correct": false,
+      "pub_date": "2018-01-16T14:46:29.776Z"
+   }
+},
+{
+   "model": "questions.answer",
+   "pk": 4,
+   "fields": {
+      "user": 7,
+      "question": 7,
+      "text": "\u043f\u0440\u0438\u0432\u0435\u0442",
+      "rating": 0,
+      "correct": false,
+      "pub_date": "2018-01-16T14:46:41.794Z"
+   }
+},
+{
    "model": "questions.tag",
    "pk": 1,
    "fields": {
@@ -320,6 +364,55 @@
    "pk": 4,
    "fields": {
       "name": "pogoda"
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 5,
+   "fields": {
+      "name": "c#"
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 6,
+   "fields": {
+      "name": "python"
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 7,
+   "fields": {
+      "name": "javascript"
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 8,
+   "fields": {
+      "name": "swift"
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 9,
+   "fields": {
+      "name": ""
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 10,
+   "fields": {
+      "name": "test"
+   }
+},
+{
+   "model": "questions.tag",
+   "pk": 11,
+   "fields": {
+      "name": "wow"
    }
 },
 {
@@ -624,7 +717,7 @@
    "pk": 1,
    "fields": {
       "password": "pbkdf2_sha256$36000$XkgjUoF1Ztdh$3z3dW3Q8MQVaewFcHNCQ9V+HRLFUly0af3G5DyBmW4A=",
-      "last_login": "2017-12-25T10:37:45.244Z",
+      "last_login": "2018-01-30T02:25:13.735Z",
       "is_superuser": true,
       "username": "supreme",
       "first_name": "",
@@ -641,8 +734,8 @@
    "model": "auth.user",
    "pk": 2,
    "fields": {
-      "password": "pbkdf2_sha256$36000$a8hEpufM5Q9B$YSUrRugyava5htmt1BejU905SsQd0MHKPH6AsS8OTm0=",
-      "last_login": "2017-12-24T23:03:56.792Z",
+      "password": "1234567890",
+      "last_login": "2018-01-30T23:13:06.842Z",
       "is_superuser": false,
       "username": "Mishka97",
       "first_name": "",
@@ -678,7 +771,7 @@
    "pk": 4,
    "fields": {
       "password": "pbkdf2_sha256$36000$jS2qoQZhb6rd$LV6a1rTmrGMbOasaGozIKclenLLpLk6riHHPenD1W4Y=",
-      "last_login": "2017-12-25T10:41:29.829Z",
+      "last_login": "2018-01-30T00:09:18.209Z",
       "is_superuser": false,
       "username": "dashusik77",
       "first_name": "",
@@ -746,12 +839,48 @@
    }
 },
 {
+   "model": "auth.user",
+   "pk": 8,
+   "fields": {
+      "password": "pbkdf2_sha256$36000$sd4MoMmIMGb0$5cl06KGQLrxitDGf9EEahj3Pb9fu7dmXK5oSNFa7Msw=",
+      "last_login": "2018-01-30T23:47:24.497Z",
+      "is_superuser": true,
+      "username": "supreme777",
+      "first_name": "",
+      "last_name": "",
+      "email": "cxcsa@mai.ru",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2018-01-18T10:06:02.256Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
+   "model": "auth.user",
+   "pk": 9,
+   "fields": {
+      "password": "6476546cvcbv",
+      "last_login": "2018-01-30T22:52:16.965Z",
+      "is_superuser": false,
+      "username": "troyan",
+      "first_name": "",
+      "last_name": "",
+      "email": "tr@ya.ru",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2018-01-30T22:52:03.273Z",
+      "groups": [],
+      "user_permissions": []
+   }
+},
+{
    "model": "questions.profile",
    "pk": 1,
    "fields": {
       "user": 2,
       "nickname": "Mikhail",
-      "avatar": "uploads/2017-12-08-163406.jpg"
+      "avatar": ""
    }
 },
 {
@@ -809,12 +938,12 @@
    }
 },
 {
-   "model": "questions.like",
-   "pk": 45,
+   "model": "questions.profile",
+   "pk": 8,
    "fields": {
-      "question_key": 1,
-      "like_author": 1,
-      "rate": true
+      "user": 9,
+      "nickname": "sashka",
+      "avatar": ""
    }
 },
 {
@@ -846,20 +975,29 @@
 },
 {
    "model": "questions.like",
-   "pk": 70,
+   "pk": 86,
    "fields": {
-      "question_key": 12,
+      "question_key": 7,
       "like_author": 6,
       "rate": true
    }
 },
 {
    "model": "questions.like",
-   "pk": 86,
+   "pk": 88,
    "fields": {
-      "question_key": 7,
-      "like_author": 6,
+      "question_key": 1,
+      "like_author": 7,
       "rate": true
+   }
+},
+{
+   "model": "questions.like",
+   "pk": 96,
+   "fields": {
+      "question_key": 1,
+      "like_author": 1,
+      "rate": false
    }
 },
 {
@@ -1157,6 +1295,71 @@
       "content_type": 7,
       "object_id": "2",
       "object_repr": "2 mbn 0 2017-12-24 23:25:29.124086+00:00",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 24,
+   "fields": {
+      "action_time": "2018-01-18T10:06:33.232Z",
+      "user": 8,
+      "content_type": 7,
+      "object_id": "15",
+      "object_repr": "15 Kakaya pogoda? 0 2018-01-09 11:54:35.704240+00:00",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 25,
+   "fields": {
+      "action_time": "2018-01-29T23:59:48.649Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "12",
+      "object_repr": "12 Go v pubg 1 2017-12-25 11:42:59.252411+00:00",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 26,
+   "fields": {
+      "action_time": "2018-01-30T02:25:38.793Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "16",
+      "object_repr": "16 Adaptation test 0 2018-01-29 22:09:40.407262+00:00",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 27,
+   "fields": {
+      "action_time": "2018-01-30T02:25:38.931Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "14",
+      "object_repr": "14 Test pagination 0 2018-01-07 16:31:40.719223+00:00",
+      "action_flag": 3,
+      "change_message": ""
+   }
+},
+{
+   "model": "admin.logentry",
+   "pk": 28,
+   "fields": {
+      "action_time": "2018-01-30T02:25:39.036Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "13",
+      "object_repr": "13 vfasdfsadasdfasdf 0 2017-12-25 12:02:32.422505+00:00",
       "action_flag": 3,
       "change_message": ""
    }

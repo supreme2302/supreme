@@ -4,7 +4,7 @@ from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 #
 
 def paginate(data, page):
-        paginator = Paginator(data, 5)
+        paginator = Paginator(data, 10)
         try:
             paginator = paginator.page(page)
         except PageNotAnInteger:

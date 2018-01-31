@@ -95,37 +95,48 @@ $(document).ready(function() {
 });
 
 
-function scr(page) {
-    $.ajaxSetup({
-           beforeSend: function(xhr, settings){
-                xhr.setRequestHeader( "X-CSRFToken", getCookie('csrftoken') )
-           }
-        });
-    console.log("is here")
-       $.ajax({
-            type: 'GET',
-            url: "scroll", //Ссылка на вьюху
-            data:{'page':page},//Здесь можно передать данные в GET запросе, например сколько значений получить
-            success: function(jso) {
-                console.log("success")
-                var div=document.getElementById("cont")
-//hello
-                div.innerHTML+=jso
-                var button=document.getElementById('btn'+page)
-                button.parentNode.removeChild(button)
-                // Ответ приходит в переменную data. Её и рендерим на страницу
-            },
-            error:function () {
-                console.log("error")
-            }
-        });
-
-};
-
-
 $(document).ready(function() {
 
     $('.sidebar-menu').click(function (event) {
         $('.right-sidebar').toggleClass('active');
     });
 });
+
+// function scr(page, data) {
+//     $.ajaxSetup({
+//            beforeSend: function(xhr, settings){
+//                 xhr.setRequestHeader( "X-CSRFToken", getCookie('csrftoken') )
+//            }
+//         });
+//     console.log("is here");
+//        $.ajax({
+//             type: 'GET',
+//             url: "scroll", //Ссылка на вьюху
+//             data:{'page':page},//Здесь можно передать данные в GET запросе, например сколько значений получить
+//             success: function(json) {
+//
+//                 console.log("success");
+//                 var div=document.getElementById("cont");
+// //hello
+// //                 var windowScroll = $(window).scrollTop();
+// //                 var windowHeight = $(window).height();
+// //                 var documentHeight = $(document).height();
+//                 //if((windowScroll + windowHeight) == documentHeight) {
+//                     div.innerHTML+=json;
+//                 //}
+//
+//
+//                 var button=document.getElementById('btn'+page);
+//                 if (data == 'False') {
+//                     button.parentNode.removeChild(button)
+//                 }
+//
+//                 // Ответ приходит в переменную data. Её и рендерим на страницу
+//             },
+//             error:function () {
+//                 console.log("error")
+//             }
+//         });
+//
+// };
+

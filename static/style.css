@@ -108,6 +108,19 @@ textarea{
     height: 34px;
     position: relative;
 }
+p {
+    word-wrap: break-word;
+}
+.btn-warning {
+    color: #222;
+    background-color: #a6e1ec;
+    border-color: #2aabd2;
+}
+.btn-warning:hover {
+    color: #222;
+    background-color:lightskyblue;
+    border-color: #2aabd2;
+}
 
 .btn-ask:hover {
     color: #a6e1ec;
@@ -165,20 +178,39 @@ h1 {
     word-wrap: break-word;
 }
 
+.btn-success {
+    background-color: #a6e1ec;
+    color: black;
+    border-color: #a6e1ec;
+}
+.btn-success:focus{
+    background-color: #a6e1ec;
+}
+.btn-success:hover{
+    background-color: #a6e1ec;
+}
+
+.outer-settings {
+    width: 200%;
+}
 @media (max-width: 991px) {
     .btn-ask {
         margin-left: 10px;
+    }
+    #id_old_password{
+        width: 300px;
+    }
+    #id_new_password{
+        width: 300px;
     }
 }
 
 @media (max-width: 774px) {
     a.login {
-        font-size: 4vh;
         padding-top: 17px;
     }
     a.register {
         padding-top: 17px;
-        font-size: 4vh;
     }
 }
 
@@ -232,6 +264,28 @@ h1 {
     .xs-third-rec {
         width: 100%;
     }
+    .control-label {
+        width: 70px;
+    }
+    #id_login{
+        width: 250px;
+    }
+    #id_email{
+        width: 250px;
+    }#id_username{
+        width: 250px;
+    }
+     #id_password{
+        width: 250px;
+    }
+     #id_password2{
+        width: 250px;
+    }
+    input[type="file"] {
+        padding-left: 15px;
+        margin-bottom: 5px;
+    }
+
 }
 @media (max-width: 523px) {
     .my-navbar {
@@ -243,7 +297,8 @@ h1 {
         padding-left: 0;
     }
     .general-container {
-
+        width: 100%;
+        position: relative;
         float:left;
         margin-left: 0;
     }
@@ -256,6 +311,8 @@ h1 {
         padding-left: 0;
     }
     .xs-row {
+        width: 100%;
+        position: relative;
         float: left;
         margin-left: 0;
     }
@@ -286,23 +343,39 @@ h1 {
         height: 26px;
     }
     .btn-dislike {
-        float: right;
         margin-top: 3px;
         padding-left: 4px;
         padding-top: 2px;
         width: 25px;
         height: 26px;
     }
-    .between-likes {
-        margin-left: 4px;
-        font-size: 4vh;
-    }
+
     h1 {
         font-size: 4vh;
         word-wrap: break-word;
     }
     p {
-        font-size: 2vh;
+        /*font-size: 3vh;*/
+    }
+    #id_login{
+        width: 180px;
+    }
+    #id_email{
+        width: 180px;
+    }#id_username{
+        width: 180px;
+    }
+     #id_password{
+        width: 180px;
+    }
+     #id_password2{
+        width: 180px;
+    }
+    #id_old_password{
+        width: 80%;
+    }
+    #id_new_password{
+        width: 80%;
     }
 }
 
@@ -325,8 +398,9 @@ h1 {
         font-size: 3vh;
         width: 25%;
     }
+
 }
-@media (max-width: 341px) {
+@media (max-width: 345px) {
 
     .my-navbar {
         float: left;
@@ -372,32 +446,39 @@ h1 {
         width: 75px;
         height: 75px;
     }
-    .btn-like {
-        margin-left: 13px;
-        padding-left: 3px;
-        padding-top: 2px;
-        width: 25px;
-        height: 26px;
-    }
-    .btn-dislike {
-        float: right;
-        padding-left: 4px;
-        padding-top: 2px;
-        width: 25px;
-        height: 26px;
-    }
-    .between-likes {
-        font-size: 4vh;
-    }
+
     h1 {
         font-size: 3vh;
-        width: 130px;
+        width: 115px;
         word-wrap: break-word;
     }
     p {
-        font-size: 2vh;
-        width: 130px;
+        /*font-size: 3vh;*/
+        width: 115px;
     }
+    .control-label {
+        width: 97px;
+    }
+    #id_login{
+        width: 180px;
+    }
+    #id_email{
+        width: 180px;
+    }#id_username{
+        width: 180px;
+    }
+     #id_password{
+        width: 180px;
+    }
+     #id_password2{
+        width: 180px;
+    }
+     .regist-dj-div {
+         /*padding-left: 0;*/
+         width: 40%;
+     }
+
+
 }
 @media (max-width: 317px) {
     .btn-ask {
@@ -405,6 +486,20 @@ h1 {
     }
     .color-head {
         width: 85px;
+    }
+     .btn-like {
+         width: 22px;
+         height: 26px;
+         font-size: 2vh;
+    }
+    .btn-dislike {
+        width: 22px;
+        height: 26px;
+        font-size: 2vh;
+    }
+    .img-my {
+        width: 65px;
+        height: 65px;
     }
 }
 @media (max-width: 298px) {
@@ -415,24 +510,28 @@ h1 {
     .color-head {
         width: 75px;
     }
-    .btn-dislike {
-        margin-top: 0;
-        width: 24px;
+    h1 {
+        padding-left: 4px;
     }
-    .btn-like {
-        width: 24px;
+    p {
+        padding-left: 4px;
     }
-    .between-likes {
-        font-size: 3vh;
+    nobr {
+        padding-left: 4px;
     }
 }
-@media (max-width: 283px) {
+@media (max-width: 286px) {
     .btn-like {
-        width: 22px;
+        width: 20px;
         height: 26px;
     }
     .btn-dislike {
-        width: 22px;
+        width: 20px;
         height: 26px;
     }
+    .img-my {
+        width: 60px;
+        height: 60px;
+    }
+
 }

@@ -12,9 +12,8 @@ class RegistrationForm(forms.Form):
     #avatar = forms.ImageField(label='avatar')
 
 class SettingForm(forms.Form):
-    login = forms.CharField(min_length=5,label='login')
-    email = forms.EmailField(label='emal')
-    username = forms.CharField(label='username')
+    password = forms.CharField(min_length=8, widget=forms.PasswordInput, label='password')
+    password2 = forms.CharField(min_length=8, widget=forms.PasswordInput, label='new password')
 
 class AskForm(forms.Form):
     title = forms.CharField()
