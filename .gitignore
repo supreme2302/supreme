@@ -1,2 +1,4 @@
 /uploads/*
 !bender.jpeg
+
+/__pycache__/
